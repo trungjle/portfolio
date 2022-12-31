@@ -1,3 +1,19 @@
 @tailwind base;
+
+@layer base {
+    html {
+        @apply text-black;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
