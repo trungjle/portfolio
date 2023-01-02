@@ -1,17 +1,19 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose, AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import LinkButton from "./LinkButton";
+"use client"
 
-export const Navbar = () => {
-    const [nav, setNav] = useState(false);
+import Link from "next/link"
+import React, { useState } from "react"
+import { AiOutlineMenu, AiOutlineClose, AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai"
+import LinkButton from "./linkButton"
+
+export default function Navbar() {
+    const [nav, setNav] = useState(false)
 
     const handleNav = () => {
-        setNav(!nav);
-    };
+        setNav(!nav)
+    }
 
     return (
-        <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+        <div className="w-full z-10 ease-in duration-300">
             <div className="max-w-[1500px] m-auto flex justify-between items-center p-6">
                 <Link href="/">
                     <h1 className="font-bold text-2xl">
@@ -19,10 +21,10 @@ export const Navbar = () => {
                     </h1>
                 </Link>
                 <ul className="hidden sm:flex space-x-6">
-                    <LinkButton href="/" buttonName="Home" />
-                    <LinkButton href="/#experience" buttonName="Experience" />
-                    <LinkButton href="/#portfolio" buttonName="Portfolio" />
-                    <LinkButton href="/#contact" buttonName="Contact" />
+                    <LinkButton href="/">Home</LinkButton>
+                    <LinkButton href="/experience">Experience</LinkButton>
+                    <LinkButton href="/portfolio">Portfolio</LinkButton>
+                    <LinkButton href="/contact">Contact</LinkButton>
                 </ul>
                 <div className="hidden sm:flex space-x-4">
                     <a href="https://www.linkedin.com/in/trungjle/">
@@ -47,15 +49,15 @@ export const Navbar = () => {
                 {/* Mobile Menu */}
                 <div className={
                     nav
-                        ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in-out duration-300"
+                        ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in-out duration-300 color: bg-white"
                         : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in-out duration-300"
                 }
                 >
                     <ul className="text-xl">
-                        <LinkButton href="/" buttonName="Home" onClick={handleNav} />
-                        <LinkButton href="/#experience" buttonName="Experience" onClick={handleNav} />
-                        <LinkButton href="/#portfolio" buttonName="Portfolio" onClick={handleNav} />
-                        <LinkButton href="/#contact" buttonName="Contact" onClick={handleNav} />
+                        <LinkButton href="/" onClick={handleNav}>Home</LinkButton>
+                        <LinkButton href="/experience" onClick={handleNav}>Experience</LinkButton>
+                        <LinkButton href="/portfolio" onClick={handleNav}>Portfolio</LinkButton>
+                        <LinkButton href="/contact" onClick={handleNav}>Contact</LinkButton>
                         <li className="mt-6">
                             <div className="flex justify-center items-center space-x-5">
                                 <a href="https://www.linkedin.com/in/trungjle/">
@@ -73,7 +75,5 @@ export const Navbar = () => {
                 </div>
             </div >
         </div >
-    );
-};
-
-export default Navbar;
+    )
+}
