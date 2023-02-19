@@ -13,6 +13,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #0a192f;
+    color: #ccd6f6;
+}
+
 :root {
     --primary-color: #fff;
     --secondary-color: #000;

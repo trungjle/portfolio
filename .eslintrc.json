@@ -4,6 +4,7 @@
     "prettier"
   ],
   "rules": {
+    "react/no-unescaped-entities": 0,
     "semi": [
       "error",
       "never"
