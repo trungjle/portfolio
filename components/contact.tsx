@@ -9,8 +9,8 @@ const Contact = () => {
                         Contact
                     </p>
                     <p className="text-gray-300 py-4">
-                        Submit the form below to contact me. Otherwise, shoot me an email!
-                        <a href="mailto:tle1911@gmail.com">tle1911@gmail.com</a>
+                        Submit the form below to contact me. Otherwise, send me an <a href="mailto:tle1911@gmail.com" className="underline">email!</a>
+
                     </p>
                 </div>
                 <input className="bg-[#ccd6f6] p-2 text-black" type="text" placeholder="Name" name="name" required={true} />

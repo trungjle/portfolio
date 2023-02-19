@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import "../styles/globals.css"
-import Navbar from "../components/navBar"
+import Navbar from "../components/navbar"
 import { Raleway } from "@next/font/google"
 
 const raleway = Raleway({
