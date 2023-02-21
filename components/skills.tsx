@@ -1,5 +1,5 @@
 import React from "react"
-import Image from '../components/Image.js'
+import Image from "next/image"
 import HTMLIcon from "../public/HTML.png"
 import CSSIcon from "../public/CSS.png"
 import ReactIcon from "../public/React.png"
