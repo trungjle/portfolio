@@ -13,7 +13,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="fixed w-full z-10 ease-in duration-300">
+        <div className="fixed top-0 w-full ease-in duration-300 bg-[#0a192f]">
             <div className="max-w-[1500px] m-auto flex justify-between items-center p-6">
 
                 <h1 className="font-bold text-2xl">
